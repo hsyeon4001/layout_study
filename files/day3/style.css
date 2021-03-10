@@ -1,0 +1,92 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+	background-color: #dde1d4;
+	padding: 15px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	max-width: 650px;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.grid {
+	width: 600px;
+	height: 1000px;
+	display: grid;
+	grid-template-columns: repeat(5, 110px);
+	grid-template-rows: repeat(8, 110px);
+	gap: 15px;
+}
+
+.first {
+	background-color: black;
+	grid-column-start: 1;
+	grid-column-end: 6;
+	display: flex;
+	color: white;
+	align-items: flex-end;
+}
+
+.first > span {
+	margin: 15px 12px;
+	line-height: 20px;
+}
+
+.first > span:first-child,
+.fourth > span:last-child {
+	white-space: pre;
+}
+
+.second,
+.third,
+.fourth {
+	background-color: red;
+}
+
+.second,
+.fourth > span:first-child {
+	font-size: 165px;
+	font-weight: bold;
+}
+
+.second {
+	grid-row-start: 2;
+	grid-row-end: 6;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	display: flex;
+	align-items: flex-end;
+	padding: 0 10px;
+}
+
+.third {
+	grid-row-start: 2;
+	grid-row-end: 6;
+	grid-column-start: 4;
+	grid-column-end: 6;
+}
+
+.fourth {
+	grid-row-start: 6;
+	grid-row-end: 9;
+	grid-column-start: 1;
+	grid-column-end: 6;
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px;
+}
+
+.fourth > span:first-child {
+	text-align: center;
+	padding: 0;
+}
+
+.fourth > span:last-child {
+	color: white;
+	font-size: 35px;
+	font-weight: 600;
+	margin: 30px 10px;
+	line-height: 40px;
+}
