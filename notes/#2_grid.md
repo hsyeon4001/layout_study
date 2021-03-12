@@ -39,3 +39,31 @@
 
 - justify-items, align-items: default는 stretch. 부모 container에 속하는 property로 grid의 크기를 조절해 grid 범위를 채움
 - `place-items: align justify`
+
+#### 2.9 Place Content
+
+- items vs. content: items는 각 cell, content는 전체 grid
+- justify-content/align-content: container 범위 내에서 grid 전체의 수평/수직 위치를 조정
+- place-items vs. place-content: 각 cell 하나 하나에 적용 vs 전체 grid에 같이 적용
+
+#### 2.10 Auto Columns and Rows
+
+- align-self처럼 self 들어갈 경우 해당 cell만 조작 -> container가 아니라 cell에 적용해야함
+- `place-self: justify-self align-self`
+- 추가되는 element(grid)에 대해 지정된 스타일이 없다면 css는 자동으로 default인 사이즈 없는 grid를 집어넣음
+- grid-auto-rows: 지정하지 않은 개수의 rows에 대해 크기를 미리 정해둠
+- grid-auto-flow: default 값은 row. column 설정 시 여분의 div가 column으로 생성됨
+
+#### 2.11 minmax
+
+- minmax: 1fr처럼 container 크기에 따라 유동적인 값의 경우 grid의 원하는 최소, 최대 크기를 설정. ex) `grid-template-columns: repeat(10, minmax(100px, 1fr))`
+
+#### 2.12 auto-fit auto-fill
+
+- auto-fit, auto-fill: repeat()에 사용. 반응형에 유용
+- auto-fill: grid에 지정된 column의 개수 범위에서 가능한 많은 column을 만듦. 만들어야 할 column(element) 수보다 범위가 넓으면 빈 공간으로 보임
+- auto-fit: container의 수평 범위에 맞게 column 크기를 조정해 화면을 꽉 채움
+
+#### 2.13 min-content max-content
+
+- min-content, max-content: content가 필요한 최대/최소 크기만큼 grid 크기가 조정됨
